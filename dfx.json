@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "hackabash_backend": {
+      "main": "src/hackabash_backend/main.mo",
+      "type": "motoko"
+    },
+    "hackabash_frontend": {
+      "dependencies": [
+        "hackabash_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/hackabash_frontend/src/index.html"
+      },
+      "source": [
+        "src/hackabash_frontend/assets",
+        "dist/hackabash_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
